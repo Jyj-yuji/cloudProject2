@@ -1,0 +1,69 @@
+2022-09-29 23:55:30,461 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2022-09-29 23:55:30,504 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'config_ssh']
+2022-09-29 23:55:30,516 DEBUG    root            Running [gcloud.compute.config-ssh] with arguments: []
+2022-09-29 23:55:30,520 WARNING  root            Could not open the configuration file: [/home/clouduser/.config/gcloud/configurations/config_default].
+2022-09-29 23:55:30,520 DEBUG    root            (gcloud.compute.config-ssh) You do not currently have an active account selected.
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials.
+
+If you have already logged in with a different account:
+
+    $ gcloud config set account ACCOUNT
+
+to select an already authenticated account to use.
+Traceback (most recent call last):
+  File "/snap/google-cloud-sdk/278/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/snap/google-cloud-sdk/278/lib/googlecloudsdk/calliope/backend.py", line 807, in Run
+    resources = command_instance.Run(args)
+  File "/snap/google-cloud-sdk/278/lib/surface/compute/config_ssh.py", line 327, in Run
+    client = holder.client
+  File "/snap/google-cloud-sdk/278/lib/googlecloudsdk/api_lib/compute/base_classes.py", line 67, in client
+    self._client = client_adapter.ClientAdapter(
+  File "/snap/google-cloud-sdk/278/lib/googlecloudsdk/api_lib/compute/client_adapter.py", line 55, in __init__
+    self._client = client or core_apis.GetClientInstance(
+  File "/snap/google-cloud-sdk/278/lib/googlecloudsdk/api_lib/util/apis.py", line 261, in GetClientInstance
+    return apis_internal._GetClientInstance(
+  File "/snap/google-cloud-sdk/278/lib/googlecloudsdk/api_lib/util/apis_internal.py", line 170, in _GetClientInstance
+    http_client = transports.GetApitoolsTransport(
+  File "/snap/google-cloud-sdk/278/lib/googlecloudsdk/core/credentials/transports.py", line 80, in GetApitoolsTransport
+    session = requests.GetSession(
+  File "/snap/google-cloud-sdk/278/lib/googlecloudsdk/core/credentials/requests.py", line 81, in GetSession
+    session = request_wrapper.WrapQuota(session, enable_resource_quota,
+  File "/snap/google-cloud-sdk/278/lib/googlecloudsdk/core/credentials/requests.py", line 124, in WrapQuota
+    quota_project = self.QuotaProject(enable_resource_quota,
+  File "/snap/google-cloud-sdk/278/lib/googlecloudsdk/core/credentials/transport.py", line 54, in QuotaProject
+    creds = store.LoadIfEnabled(allow_account_impersonation, use_google_auth)
+  File "/snap/google-cloud-sdk/278/lib/googlecloudsdk/core/credentials/store.py", line 454, in LoadIfEnabled
+    return Load(
+  File "/snap/google-cloud-sdk/278/lib/googlecloudsdk/core/credentials/store.py", line 564, in Load
+    cred = _Load(
+  File "/snap/google-cloud-sdk/278/lib/googlecloudsdk/core/credentials/store.py", line 719, in _Load
+    raise creds_exceptions.NoActiveAccountException(
+googlecloudsdk.core.credentials.exceptions.NoActiveAccountException: You do not currently have an active account selected.
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials.
+
+If you have already logged in with a different account:
+
+    $ gcloud config set account ACCOUNT
+
+to select an already authenticated account to use.
+2022-09-29 23:55:30,529 ERROR    root            (gcloud.compute.config-ssh) You do not currently have an active account selected.
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials.
+
+If you have already logged in with a different account:
+
+    $ gcloud config set account ACCOUNT
+
+to select an already authenticated account to use.
