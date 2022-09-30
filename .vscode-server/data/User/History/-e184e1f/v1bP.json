@@ -1,0 +1,7 @@
+{
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "remote.SSH.remotePlatform": {
+        "student-vm.us-east1-b.gcp-docker-kubernetes-364019": "linux"
+    }
+}
